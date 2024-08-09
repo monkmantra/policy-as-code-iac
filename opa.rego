@@ -2,7 +2,7 @@ package terraform
  
 import input.tfplan as tfplan
 
-default allow = false
+# default allow = false
 
 # Allowed Terraform resources
 allowed_resources = [
