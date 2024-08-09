@@ -1,7 +1,9 @@
 package terraform
  
 import input.tfplan as tfplan
- 
+
+default allow = false
+
 # Allowed Terraform resources
 allowed_resources = [
 	# Cloud Run
@@ -31,4 +33,8 @@ deny[reason] {
     "%s: resource type %q is not allowed in this project.",
     [resource.address, resource.type]
   )
+}
+
+allow {
+  not deny
 }
