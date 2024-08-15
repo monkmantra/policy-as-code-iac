@@ -25,7 +25,7 @@ denyremovaloflabels[msg] {
 
  required_labels := { "environment", "app_type", "cost_center", "irisk_id", "app_name" }
  
- provided_labels := {label | changeset.values.template[0].labels[label]}
+ provided_labels := {label | changeset.values.labels[label]}
 
  missing_labels := required_labels - provided_labels
 
