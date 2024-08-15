@@ -21,6 +21,7 @@ denyremovaloflabels[msg] {
  
  # Ignore if resource doesn't support labels
  changeset.values.template[0].labels
+ changeset.values.template[0].labels != null
 
  required_labels := { "environment", "app_type", "cost_center", "irisk_id", "app_name" }
  
