@@ -1,22 +1,23 @@
-# Policy as Code (Terraform)
+# Policy as Code (Open Policy Agent)
 
-This repository defined library for terraform OPA policies. There are maintly two policies defined in this library.
-In case any one of the following OPA policy violation occurs in terraform plan, it will stop the deployment and displays violation message in the GitHub Action summary.
+This repository defines a set of OPA policies to enforce enterprise standards during cloud resource provisioning. In case of any OPA policy violation occurs in Terraform plan, it will stop the deployment and displays violation message in GitHub Actions summary.
 
-## Google Cloud Resources Not Allowed
+## Currently available OPA policies
 
-- In this policy three resources defined as allowed resources.
+## Allowed Google Cloud resources
+
+- This policy allows the provisioning of only the below resources:
   - Cloud Run
   - Cloud Run IAM Policy
-  - Cloud Spanner Database
-- All other resources are defined as per this policy.
+  - Cloud Spanner
+- All other resources are disallowed as per this policy.
 
-## Google Cloud Resources Mandatory Labels
+## Mandatory labels for Google Cloud resources
 
-- In this policy five labels defined as mandatory labels for Cloud Run resource.
+- This policy mandates the presence of below labels for the Google Cloud resources being provisioned.
   - environment
   - app_name
   - app_type
   - iRisk_id
   - cost_center
-- If any of these mandatory labels removed from the terraform code, it will violates the policy.
+- If any of these mandatory labels are not present or removed from the Terraform code, it will violate the policy.
