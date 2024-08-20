@@ -4,7 +4,7 @@ This repository defines a set of OPA policies to enforce enterprise standards du
 
 ## Currently available OPA policies
 
-## Allowed Google Cloud resources
+### Allowed Google Cloud resources
 
 - This policy allows the provisioning of only the below resources:
   - Cloud Run
@@ -12,7 +12,7 @@ This repository defines a set of OPA policies to enforce enterprise standards du
   - Cloud Spanner
 - All other resources are disallowed as per this policy.
 
-## Mandatory labels for Google Cloud resources
+### Mandatory labels for Google Cloud resources
 
 - This policy mandates the presence of below labels for the Google Cloud resources being provisioned.
   - environment
